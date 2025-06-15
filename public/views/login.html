@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <header>
+
+        <button class="Bvoltar">Voltar</button>
+        <h1>MlDecoração</h1>
+    </header>
+
+
+<div class="placeimg">
+<img class="logo" src="images/logo_ML.png" alt="">
+</div>
+
+<div class="placetitle">
+<h1 class="title">Acesse ou crie sua conta</h1>
+</div>
+    
+    <div class="placetable">
+    <div class="tabel">
+        <h2>LOGIN</h2>
+
+     <form action="/login" method="POST">
+    <div>
+        <input type="text" name="email" placeholder="Email" required>
+    </div>
+
+  <div style="position: relative;">
+    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+    <button type="button" onclick="toggleSenha()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+        👁️
+    </button>
+</div>
+
+    <div class="Esqueceu">
+        <a href="/views/troca_senha.html">Esqueceu a senha? </a>
+    </div>
+
+    <div class="div-login">
+        <button type="submit">Login</button>
+    </div>
+</form>
+
+         <div class="log">
+  <span>Não possui uma conta? </span><a href="/views/cadastra.html">Cadastre-se</a>
+</div>
+
+    </div>
+</div>
+
+
+<div class="PlaceHelp">
+    <div>
+    <p>Problema? fale conosco </p>
+    </div>
+</div>
+
+
+<script src="../script/login.js"></script>
+
+</body>
+
+</html>

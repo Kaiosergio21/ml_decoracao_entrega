@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --Bg-Gold: #FFC300;
+    --Bg-Dark: #2C2C2C;
+    --Bg-Light: #FDF5A0;
+    --Button-Primary: #FFD900;
+    --Button-Hover: #baaa00;
+    --Text-Light: #FFFFFF;
+    --Text-Dark: #2C2C2C;
+}
+
+body {
+    height: 100vh;
+    background: var(--Bg-Dark);
+}
+
+.container {
+    width: 50vw;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.container h1 {
+    color: var(--Text-Light);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 10px;
+}
+
+header .shopping {
+    position: relative;
+    text-align: right;
+}
+
+header .shopping i {
+    font-size: 3rem;
+    color: var(--Bg-Gold);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+header .shopping i:hover {
+    color: var(--Button-Hover);
+}
+
+header .shopping span {
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    background: red;
+    padding: 3px 10px;
+    border-radius: 50%;
+    color: var(--Text-Light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card do Carrinho */
+.card {
+    position: fixed;
+    top: 0;
+    left: 100%; 
+    width: 500px;
+    height: 100vh;
+    background-color: var(--Bg-Dark);
+    border-left: 1px solid var(--Bg-Gold);
+    transition: 0.5s;
+}
+
+.active .card {
+    left: calc(100% - 500px);
+}
+
+.active .container {
+    transform: translateX(-200px);
+}
+
+.card h1 {
+    color: var(--Bg-Gold);
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.card .checkOut div {
+    background-color: var(--Bg-Gold);
+    color: var(--Text-Dark);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card .checkOut div:nth-child(2) {
+    background-color: var(--Button-Hover);
+    color: var(--Text-Dark);
+}
+
+/* Lista de Produtos */
+.container .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.list .item {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.list .item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.list .item img {
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.list .item .title {
+    font-weight: 600;
+    color: var(--Text-Light);
+    margin: 10px 0;
+}
+
+.list .item .price {
+    margin: 10px;
+    color: var(--Bg-Gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.list .item button {
+    background-color: var(--Bg-Gold);
+    color: var(--Text-Dark);
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid var(--Bg-Gold);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.list .item button:hover {
+    background-color: var(--Button-Hover);
+    border-color: var(--Button-Hover);
+}
+
+/* Itens do Carrinho */
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: var(--Text-Light);
+    row-gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    width: 90%;
+    border-radius: 5px;
+}
+
+.listCard .count {
+    margin: 0 10px;
+    color: var(--Text-Light);
+    font-size: 1.2rem;
+}
+
+.cardTitle, .cardPrice {
+    color: var(--Text-Light);
+}
+
+.cardButton {
+    width: 28px;
+    height: 28px;
+    background-color: var(--Bg-Gold);
+    color: var(--Text-Dark);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cardButton:hover {
+    background-color: var(--Button-Hover);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .container {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90vw;
+    }
+    
+    .container .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card {
+        width: 100%;
+    }
+    
+    .active .card {
+        left: 0;
+    }
+    
+    .active .container {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container .list {
+        grid-template-columns: 1fr;
+    }
+    
+    header .shopping i {
+        font-size: 2.5rem;
+    }
+    
+    .listCard li {
+        grid-template-columns: 80px repeat(3, 1fr);
+        font-size: 0.9rem;
+    }
+}
