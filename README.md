@@ -1,5 +1,40 @@
 # Histórico de Atualizações - Sistema de Aluguel para Festas
 
+
+## 📅 Histórico de Atualizações
+
+- **05/05/2025** – Criação do repositório inicial.
+- **16/05/2025** – Adicionado sistema de cadastro de produtos.
+- **20/05/2025** – Integração com banco de dados MySQL finalizada.
+- **05/06/2025** – Implementado carrinho de compras com sessão por usuário.
+- **06/06/2025** – Melhorias no layout da página de entrega.
+
+## 🔧 Como usar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Kaiosergio21/ml_decoracao_entrega.git
+
+#Comando para inciar o ambiente
+   npm init -y
+
+#Comando de instalação
+   npm install express mysql2 dotenv path  bcryptjs express-session
+
+#Rodar porgarama
+   node server.js
+
+
+#.env fica
+
+# Banco de dados MySQL
+DB_HOST=localhost
+DB_PORT=6006
+DB_USER=root
+DB_PASSWORD=sua_senha
+DB_NAME=ml_decoracao
+
+
 ## [1.0.0] - 06/05/2024 
 ### Sistema de Login
 - **Implementação inicial**:
@@ -34,7 +69,7 @@
     3. Página protegida para redefinição
   - Notificação por e-mail em cada etapa
 
-## [1.3.0] - 05/05/2024  2023-12-10
+## [1.3.0] - 05/06/2024  2023-12-10
 ### Finalização via WhatsApp
 - **Fluxo seguro**:
   - Bloqueio do processo sem autenticação
@@ -47,7 +82,7 @@
     - Dados do cliente (nome, telefone)
     - Código de reserva único
 
-## [1.4.0] - 05/05/2024  2024-01-20
+## [1.4.0] - 06/06/2025 
 ### Atualização de Design
 - **Identidade Visual**:
   - Paleta oficial implementada:
@@ -60,18 +95,7 @@
     - Modal do carrinho com transição suave
   - Tipografia unificada (Montserrat em 3 pesos)
 
-## [1.4.1] - 2024-02-05
-### Melhorias e Correções
-- **Responsividade**:
-  - Adaptação para mobile (320px-768px)
-  - Menu hamburguer em telas pequenas
-  - Ajuste no fluxo do carrinho
-- **Bugs Corrigidos**:
-  - Formatação de valores em iOS
-  - Sincronização de sessão entre abas
-  - Validação de formulários em Edge
 
----
 
 ## Roadmap - Próximas Atualizações
 
