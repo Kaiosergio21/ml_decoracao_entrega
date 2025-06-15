@@ -69,7 +69,7 @@ DB_NAME=ml_decoracao
     3. Página protegida para redefinição
   - Notificação por e-mail em cada etapa
 
-## [1.3.0] - 05/06/2024  2023-12-10
+## [1.3.0] - 05/06/2024 
 ### Finalização via WhatsApp
 - **Fluxo seguro**:
   - Bloqueio do processo sem autenticação
